@@ -27,7 +27,7 @@ class LinkedList:
             temp = temp.next
 
 
-    # adding a new Node at beginning
+    # adding a new Node at beginning = O(1) 
     def push(self,newData):
         # allocate the node and put in new data
         newNode = Node(newData)
@@ -39,7 +39,7 @@ class LinkedList:
         self.head = newNode
 
 
-    # adding a new Node at middle
+    # adding a new Node at middle = O(n) to access and O(1) to add
     def insertAfter(self,new,prev):
         # check if prev node exists
         if prev is None:
@@ -49,7 +49,8 @@ class LinkedList:
         # make a new node and add data to it
         new = Node(new)
 
-        # make the next of new node as the next of prev Node
+        # make the next of new node as the next of prev Node 
+        #whatever will be the next elemnt of prev Node will be next elemnt of new Node
         new.next = prev.next
 
         # make the next of prev as the new Node
