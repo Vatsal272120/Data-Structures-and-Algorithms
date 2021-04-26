@@ -50,7 +50,7 @@ class LinkedList:
         new = Node(new)
 
         # make the next of new node as the next of prev Node 
-        #whatever will be the next elemnt of prev Node will be next elemnt of new Node
+        # whatever will be the next elemnt of prev Node will be next elemnt of new Node
         new.next = prev.next
 
         # make the next of prev as the new Node
