@@ -38,6 +38,44 @@ class LinkedList:
         # Move head pointer to newNode
         self.head = newNode
 
+
+    # adding a new Node at middle
+    def insertAfter(self,new,prev):
+        # check if prev node exists
+        if prev is None:
+            print("N/A")
+            return
+
+        # make a new node and add data to it
+        new = Node(new)
+
+        # make the next of new node as the next of prev Node
+        new.next = prev.next
+
+        # make the next of prev as the new Node
+        prev.next = new
+
+
+    # addn node to end of list
+    def append(self, new):
+
+        # create node
+        # traverse the list starting at head
+        # add the last.next = new node
+
+        new = Node(new)
+
+        if self.head is None:
+            self.head = new
+            return
+
+        temp = self.head
+        while (temp.next):
+            temp = temp.next
+
+        temp.next = new
+        
+
         
         
 
@@ -64,6 +102,11 @@ if __name__ == '__main__':
     # adding node to head
     llist.push(7)
     llist.push(8)
+
+
+    #appending the node
+    llist.append(15)
+    llist.append(15)
 
 
     #print list
