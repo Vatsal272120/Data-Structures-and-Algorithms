@@ -15,6 +15,7 @@ def twoNumberSumOptimized(array, target) :
 
        if potentialMatch in hashTable: 
            return [potentialMatch, num]
+           
        hashTable[num] = True
 
  
